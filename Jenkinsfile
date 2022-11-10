@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                sh 'git https://github.com/shanthilakshmi/Python.git'
+                sh 'git clone https://github.com/shanthilakshmi/Python.git'
             }
         }
         stage('Build') {
