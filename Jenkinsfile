@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('Clean repo') {
+            steps {
+                sh ' rm -rf Python '
+            }
+        }
         stage('Checkout') {
             steps {
                 sh 'git clone https://github.com/shanthilakshmi/Python.git'
