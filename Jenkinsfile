@@ -1,7 +1,6 @@
 pipeline {
-    agent any
-
-    stages {
+agent any
+stages {
         stage('Clean repo') {
             steps {
                 sh ' rm -rf Python '
@@ -22,7 +21,7 @@ pipeline {
                 sh 'python3 -m pytest --junit-xml test_Samplefile.py'
             }
         }
-        Stage('Deliver'){
+        stage('Deliver'){
             steps {
             sh'pyinstaller -F Samplefile.py'
             }
