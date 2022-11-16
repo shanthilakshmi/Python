@@ -14,7 +14,7 @@ pipeline {
        // }
         stage('Build') {
             steps {
-                sh 'python3 py_compile Samplefile.py'
+                sh 'python3 -m py_compile Samplefile.py'
             }
         }
         stage('Test') {
