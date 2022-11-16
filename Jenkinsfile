@@ -8,10 +8,10 @@ pipeline {
             }
         }
         //stage('Checkout') {
-            steps {
-                sh 'git clone https://github.com/shanthilakshmi/Python.git'
-            }
-        }
+           // steps {
+             //   sh 'git clone https://github.com/shanthilakshmi/Python.git'
+            //}
+       // }
         stage('Build') {
             steps {
                 sh 'python3 py_compile Samplefile.py'
