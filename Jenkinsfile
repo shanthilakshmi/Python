@@ -23,7 +23,7 @@ stages {
         }
         stage('Deliver'){
             steps {
-            sh'pyinstaller -F Samplefile.py'
+            sh'python3 pyinstaller -F Samplefile.py'
             }
         }
     }
