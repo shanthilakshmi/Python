@@ -7,14 +7,14 @@ pipeline {
                 sh ' rm -rf Python '
             }
         }
-        stage('Checkout') {
+        //stage('Checkout') {
             steps {
                 sh 'git clone https://github.com/shanthilakshmi/Python.git'
             }
         }
         stage('Build') {
             steps {
-                sh 'python3 Samplefile.py'
+                sh 'python3 py_compile Samplefile.py'
             }
         }
         stage('Test') {
